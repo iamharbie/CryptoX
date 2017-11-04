@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CryptoX</string>
+    <string name="error_message">An error occurred&amp;#8230Please Refresh!!!</string>
+
+    <string-array name="currencies_lists">
+        <item name="btc">Bitcoin</item>
+        <item name="usd">Ethereum</item>
+
+
+
+    </string-array>
+    
+    
+
+</resources>

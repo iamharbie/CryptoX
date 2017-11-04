@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.intrepid.cryptox.Converter"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background=" #66BA68C8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From"
+            android:textColor="#fff"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="40dp"/>
+
+        <Spinner
+            android:id="@+id/activity_converter_spinner_convert_from"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:entries="@array/currencies_lists"/>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To"
+            android:textColor="#fff"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="65dp"/>
+
+        <Spinner
+            android:id="@+id/activity_converter_spinner_convert_to"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/currencies_lists"/>
+
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_converter_textview_convert"/>
+
+    <TextView
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Value "
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        android:id="@+id/activity_converter_textview_value"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        android:hint="Enter Value Here"
+        android:id="@+id/activity_converter_edittext_value"
+        android:inputType="numberDecimal"/>
+
+
+</LinearLayout>
