@@ -43,11 +43,15 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.ViewHo
 
         Currency currency = currenciesList.get(position);
 
-        holder.textViewCurrencyName.setText(currency.getName());
+        String currencyName = currency.getName();
+        String sBitcoinValue = String.valueOf(currency.getBitcoinValue()) + " ";
+        String sEthereumValue = String.valueOf(currency.getEthereumValue()) + " ";
 
-        holder.textViewBitcoinValue.setText(String.valueOf(currency.getBitcoinValue()));
+        holder.textViewCurrencyName.setText(currencyName);
+        holder.textViewBitcoinValue.setText(sBitcoinValue);
         holder.textViewBitcoinValue.setSelected(true);
-        holder.textViewEthereumValue.setText(String.valueOf(currency.getEthereumValue()));
+        holder.textViewEthereumValue.setText(sEthereumValue);
+        holder.textViewEthereumValue.setSelected(true);
     }
 
     @Override
@@ -102,7 +106,7 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.ViewHo
     }
 
     /**
-     *Method to set githubUserlist.
+     *Method to set currenciesLIst.
      * Not using a constructor to set it cos we may need to change it wiothout creating a new
      * GitHubUserAdapter
      *

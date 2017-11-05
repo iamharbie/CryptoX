@@ -8,7 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
         <item name="android:colorPrimary">?attr/colorPrimary</item>
-        <item name="android:colorPrimaryDark">#512DA8</item>
+        <item name="android:colorPrimaryDark">?attr/colorPrimaryDark</item>
         <item name="android:textColorPrimaryInverse">#fff</item>
         <item name="android:textColorSecondaryInverse">#fff</item>
     </style>

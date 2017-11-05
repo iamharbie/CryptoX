@@ -32,7 +32,7 @@
         <activity android:name=".Converter"
             android:parentActivityName=".MainActivity"
             android:theme="@style/Theme.AppCompat.Translucent"
-            >
+            android:label="">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />

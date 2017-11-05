@@ -11,8 +11,8 @@
         <item name="android:textColorSecondaryInverse">#fff</item>
     </style>
 
-    <style name="Theme.AppCompat.Translucent" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:background"> #66BA68C8</item> <!-- Or any transparency or color you need -->
+    <style name="Theme.AppCompat.Translucent" parent="Base.Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background"> #665C6BC0</item> <!-- Or any transparency or color you need -->
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@null</item>

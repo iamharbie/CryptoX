@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context="com.intrepid.cryptox.AddCurrencies">
+    tools:context="com.intrepid.cryptox.AddCurrencies"
+    android:background="#E8EAF6">
 
    <fragment
        android:layout_width="match_parent"

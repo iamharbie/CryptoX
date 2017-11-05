@@ -16,19 +16,19 @@ import com.intrepid.cryptox.model.Currency;
 
 public class Converter extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    public static final String CURRENCY_NAME = "currency name";
-    public static final String BITCOIN_VALUE = "bitcoin value";
-    public static final String ETHEREUM_VALUE =  "ethereum value";
+
     public static final String CURRENCY = "currency" ;
 
     private Spinner spinnerConvertFrom;
     private Spinner spinnerConvertTo;
 
     private TextView valueTextView;
+    private TextView titleTextView;
     private EditText valueEditText;
     private double bitcoinValue;
     private double ethereumValue;
     private String currencyName;
+    String title;
      private ArrayAdapter<String> spinnerCustomAdapter;
 
     @Override
@@ -39,16 +39,16 @@ public class Converter extends AppCompatActivity implements AdapterView.OnItemSe
         spinnerConvertFrom = (Spinner) findViewById(R.id.activity_converter_spinner_convert_from);
         spinnerConvertTo = (Spinner) findViewById(R.id.activity_converter_spinner_convert_to);
 
-        spinnerCustomAdapter = new ArrayAdapter<String>(this,R.layout.simple_spinner_item);
+        spinnerCustomAdapter = new ArrayAdapter<>(this,R.layout.simple_spinner_item);
         spinnerCustomAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerConvertFrom.setAdapter(spinnerCustomAdapter);
         spinnerConvertTo.setAdapter(spinnerCustomAdapter);
         spinnerConvertTo.setOnItemSelectedListener(this);
         spinnerConvertFrom.setOnItemSelectedListener(this);
-
         valueTextView =(TextView) findViewById(R.id.activity_converter_textview_value);
+        valueTextView.setSelected(true);
         valueEditText = (EditText) findViewById(R.id.activity_converter_edittext_value);
-
+        titleTextView = (TextView) findViewById(R.id.activity_converter_textview_title);
 
         Intent intent = getIntent();
 
@@ -68,7 +68,8 @@ public class Converter extends AppCompatActivity implements AdapterView.OnItemSe
         spinnerConvertFrom.setSelection(2);
         spinnerConvertTo.setSelection(0);
 
-
+        title = currencyName +" - Bitcoin";
+        titleTextView.setText(title);
 
         valueEditText.addTextChangedListener(new TextWatcher() {
             @Override
@@ -92,7 +93,7 @@ public class Converter extends AppCompatActivity implements AdapterView.OnItemSe
     private void beforeConvert(Editable editable) {
         if(editable.length()==0 || editable==null){
 
-                valueTextView.setText("Value");
+                valueTextView.setText("Result");
 
         }
         else if (editable !=null && editable.length() >0){
@@ -135,6 +136,11 @@ public class Converter extends AppCompatActivity implements AdapterView.OnItemSe
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        String convertFrom = spinnerCustomAdapter.getItem(spinnerConvertFrom.getSelectedItemPosition()).toString();
+        String convertTo = spinnerCustomAdapter.getItem(spinnerConvertTo.getSelectedItemPosition()).toString();
+
+        title = convertFrom + " - " + convertTo;
+        titleTextView.setText(title);
         beforeConvert(valueEditText.getText());
     }
 

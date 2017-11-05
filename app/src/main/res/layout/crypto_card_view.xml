@@ -73,7 +73,7 @@
                 android:layout_margin="4dp"
                 android:textSize="40sp"
                 android:id="@+id/crypto_cardView_currency"
-                android:textColor="#9925f7"
+                android:textColor="#3949AB"
                 />
 
 
@@ -97,6 +97,7 @@
                         android:src="@drawable/icons8_bitcoin" />
 
                     <TextView
+                        android:textColor="#5C6BC0"
                         android:id="@+id/crypto_card_bitcoin"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -107,7 +108,12 @@
                         android:marqueeRepeatLimit="marquee_forever"
                         android:singleLine="true"
                         android:text="33333"
-                        android:textSize="22sp"/>
+                        android:textSize="22sp"
+
+
+                        />
+
+
                 </LinearLayout>
 
 
@@ -123,6 +129,7 @@
                         android:src="@drawable/icons8_ethereum" />
 
                     <TextView
+                        android:textColor="#7986CB"
                         android:id="@+id/crypto_card_ethereum"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
