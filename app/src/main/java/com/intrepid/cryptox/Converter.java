@@ -60,15 +60,15 @@ public class Converter extends AppCompatActivity implements AdapterView.OnItemSe
         //getSupportActionBar().setTitle(currencyName + " - " + getSupportActionBar().getTitle());
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        spinnerCustomAdapter.add("Bitcoin");
-        spinnerCustomAdapter.add("Ethereum");
+        spinnerCustomAdapter.add(getString(R.string.bitcoin));
+        spinnerCustomAdapter.add(getString(R.string.ethereum));
 
         spinnerCustomAdapter.add(currencyName);
 
         spinnerConvertFrom.setSelection(2);
         spinnerConvertTo.setSelection(0);
 
-        title = currencyName +" - Bitcoin";
+        title = currencyName +" - " + getString(R.string.bitcoin);
         titleTextView.setText(title);
 
         valueEditText.addTextChangedListener(new TextWatcher() {
@@ -91,14 +91,14 @@ public class Converter extends AppCompatActivity implements AdapterView.OnItemSe
     }
 
     private void beforeConvert(Editable editable) {
-        if(editable.length()==0 || editable==null){
+        if(editable.length()==0 ){
 
-                valueTextView.setText("Result");
+                valueTextView.setText(getString(R.string.result));
 
         }
-        else if (editable !=null && editable.length() >0){
-            String convertFrom = spinnerCustomAdapter.getItem(spinnerConvertFrom.getSelectedItemPosition()).toString();
-            String convertTo = spinnerCustomAdapter.getItem(spinnerConvertTo.getSelectedItemPosition()).toString();
+        else if (editable.length() >0){
+            String convertFrom = spinnerCustomAdapter.getItem(spinnerConvertFrom.getSelectedItemPosition());
+            String convertTo = spinnerCustomAdapter.getItem(spinnerConvertTo.getSelectedItemPosition());
 
             double valueToConvert = Double.parseDouble(valueEditText.getText().toString());
             valueTextView.setText(convert(convertFrom, convertTo, valueToConvert));
@@ -112,22 +112,22 @@ public class Converter extends AppCompatActivity implements AdapterView.OnItemSe
         }
 
 
-        else if (convertFrom.equals("Ethereum")&& convertTo.equals("Bitcoin")){
+        else if (convertFrom.equals(getString(R.string.ethereum))&& convertTo.equals(getString(R.string.bitcoin))){
             value=String.valueOf(valueToConvert *(ethereumValue/bitcoinValue));
         }
-        else if (convertFrom.equals("Bitcoin")&& convertTo.equals("Ethereum")){
+        else if (convertFrom.equals(getString(R.string.bitcoin))&& convertTo.equals(getString(R.string.ethereum))){
             value=String.valueOf(valueToConvert *(bitcoinValue/ethereumValue));
         }
-        else if (convertFrom.equals("Bitcoin") && convertTo.equals(currencyName)){
+        else if (convertFrom.equals(getString(R.string.bitcoin)) && convertTo.equals(currencyName)){
             value=String.valueOf(valueToConvert * bitcoinValue);
         }
-        else if (convertFrom.equals("Ethereum") && convertTo.equals(currencyName)){
+        else if (convertFrom.equals(getString(R.string.ethereum)) && convertTo.equals(currencyName)){
             value=String.valueOf(valueToConvert * ethereumValue);
         }
-        else if (convertFrom.equals(currencyName) && convertTo.equals("Bitcoin")){
+        else if (convertFrom.equals(currencyName) && convertTo.equals(getString(R.string.bitcoin))){
             value=String.valueOf(valueToConvert * (1/bitcoinValue));
         }
-        else if (convertFrom.equals(currencyName) && convertTo.equals("Ethereum")){
+        else if (convertFrom.equals(currencyName) && convertTo.equals(getString(R.string.ethereum))){
             value=String.valueOf(valueToConvert *(1/ ethereumValue));
         }
 
@@ -136,8 +136,8 @@ public class Converter extends AppCompatActivity implements AdapterView.OnItemSe
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        String convertFrom = spinnerCustomAdapter.getItem(spinnerConvertFrom.getSelectedItemPosition()).toString();
-        String convertTo = spinnerCustomAdapter.getItem(spinnerConvertTo.getSelectedItemPosition()).toString();
+        String convertFrom = spinnerCustomAdapter.getItem(spinnerConvertFrom.getSelectedItemPosition());
+        String convertTo = spinnerCustomAdapter.getItem(spinnerConvertTo.getSelectedItemPosition());
 
         title = convertFrom + " - " + convertTo;
         titleTextView.setText(title);

@@ -9,7 +9,7 @@
     android:padding="16dp"
     android:layout_gravity="center"
     android:gravity="center"
-    android:background="#665C6BC0">
+    android:background="@color/activity_converter_background">
 
     <TextView
         android:layout_width="wrap_content"
@@ -17,9 +17,9 @@
         android:maxLines="1"
         android:layout_marginBottom="18dp"
         android:textSize="30sp"
-        android:text="NGR - BITCOIN"
+        android:text="@string/activity_converter_title_placeholder"
         android:textStyle="bold"
-        android:textColor="#fff"
+        android:textColor="@color/activity_converter_title"
         android:id="@+id/activity_converter_textview_title"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,8 +28,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="From"
-            android:textColor="#BDBDBD"
+            android:text="@string/from"
+            android:textColor="@color/activity_converter_text"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginEnd="40dp"/>
@@ -51,8 +51,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="To"
-            android:textColor="#BDBDBD"
+            android:text="@string/to"
+            android:textColor="@color/activity_converter_text"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginEnd="68dp"/>
@@ -72,16 +72,17 @@
         android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Result"
+        android:hint="@string/result"
 
-        android:textColor="#BDBDBD"
-        android:textColorHint="#BDBDBD"
+        android:textColor="@color/activity_converter_text"
+        android:textColorHint="@color/activity_converter_text"
         android:id="@+id/activity_converter_textview_value"
         android:textSize="40sp"
         android:textStyle="bold"
         android:ellipsize="marquee"
         android:focusable="true"
         android:paddingEnd="10dp"
+        android:paddingStart="0dp"
         android:marqueeRepeatLimit="marquee_forever"
         android:singleLine="true"
 
@@ -94,7 +95,7 @@
         android:textColor="#BDBDBD"
         android:textColorHint="#BDBDBD"
         android:textAlignment="center"
-        android:hint="Enter Value Here"
+        android:hint="@string/edit_text_view_placeholder"
         android:id="@+id/activity_converter_edittext_value"
         android:inputType="numberDecimal"/>
 

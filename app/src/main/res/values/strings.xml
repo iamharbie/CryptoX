@@ -1,8 +1,17 @@
 <resources>
     <string name="app_name">CryptoX</string>
     <string name="error_message">An error occurred&amp;#8230;Please Swipe down to Refresh!!!</string>
-    <string name="bitcoin">Bitcoin</string>
+    <string name="result">Result</string>
     <string name="ethereum">Ethereum</string>
+    <string name="bitcoin">Bitcoin</string>
+    <string name="activity_converter_title_placeholder">NGR - BITCOIN</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+
+    <string name="edit_text_view_placeholder">Enter Value Here</string>
+    <string name="delete">DELETE</string>
+    <string name="ngr">NGR</string>
+    <string name="card_placeholder">33333</string>
 
     <string-array name="currencies_lists">
         <item name="btc">Bitcoin</item>

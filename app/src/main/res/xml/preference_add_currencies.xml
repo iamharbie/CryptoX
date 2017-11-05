@@ -87,7 +87,7 @@
     <CheckBoxPreference
         android:enabled="true"
         android:defaultValue="false"
-        android:title="Australian Zealand Dollar (NZD)"
+        android:title="Australian Zealand $ (NZD)"
         android:key="AUD"
         android:summaryOn="Shown"
         android:summaryOff="Not Shown"
@@ -97,7 +97,7 @@
     <CheckBoxPreference
         android:enabled="true"
         android:defaultValue="false"
-        android:title=" South African Rand (ZAR)"
+        android:title="South African Rand (ZAR)"
         android:key="ZAR"
         android:summaryOn="Shown"
         android:summaryOff="Not Shown"
@@ -107,7 +107,7 @@
     <CheckBoxPreference
         android:enabled="true"
         android:defaultValue="false"
-        android:title=" Hong Kong Dollar (HKD)"
+        android:title="Hong Kong Dollar (HKD)"
         android:key="HKD"
         android:summaryOn="Shown"
         android:summaryOff="Not Shown"
@@ -118,7 +118,7 @@
     <CheckBoxPreference
         android:enabled="true"
         android:defaultValue="false"
-        android:title=" Chilean Peso (CLP)"
+        android:title="Chilean Peso (CLP)"
         android:key="CLP"
         android:summaryOn="Shown"
         android:summaryOff="Not Shown"
@@ -128,7 +128,7 @@
     <CheckBoxPreference
         android:enabled="true"
         android:defaultValue="false"
-        android:title=" Indian Rupee (INR)"
+        android:title="Indian Rupee (INR)"
         android:key="INR"
         android:summaryOn="Shown"
         android:summaryOff="Not Shown"
@@ -139,7 +139,7 @@
     <CheckBoxPreference
         android:enabled="true"
         android:defaultValue="false"
-        android:title=" Korean Won (KRW)"
+        android:title="Korean Won (KRW)"
         android:key="KRW"
         android:summaryOn="Shown"
         android:summaryOff="Not Shown"
@@ -150,7 +150,7 @@
     <CheckBoxPreference
         android:enabled="true"
         android:defaultValue="false"
-        android:title=" Mexican Peso (MXN)"
+        android:title="Mexican Peso (MXN)"
         android:key="MXN"
         android:summaryOn="Shown"
         android:summaryOff="Not Shown"
@@ -161,7 +161,7 @@
     <CheckBoxPreference
         android:enabled="true"
         android:defaultValue="false"
-        android:title=" Swedish Krona (SEK)"
+        android:title="Swedish Krona (SEK)"
         android:key="SEK"
         android:summaryOn="Shown"
         android:summaryOff="Not Shown"
@@ -172,7 +172,7 @@
     <CheckBoxPreference
         android:enabled="true"
         android:defaultValue="false"
-        android:title=" Brazilian Real (BRL)"
+        android:title="Brazilian Real (BRL)"
         android:key="BRL"
         android:summaryOn="Shown"
         android:summaryOff="Not Shown"
@@ -183,7 +183,7 @@
     <CheckBoxPreference
         android:enabled="true"
         android:defaultValue="false"
-        android:title=" Indonesian Rupiah(IDR)"
+        android:title="Indonesian Rupiah(IDR)"
         android:key="IDR"
         android:summaryOn="Shown"
         android:summaryOff="Not Shown"
@@ -193,7 +193,7 @@
     <CheckBoxPreference
         android:enabled="true"
         android:defaultValue="false"
-        android:title=" Singaporean Dollar (SGD)"
+        android:title="Singaporean Dollar (SGD)"
         android:key="SGD"
         android:summaryOn="Shown"
         android:summaryOff="Not Shown"
@@ -204,18 +204,16 @@
     <CheckBoxPreference
         android:enabled="true"
         android:defaultValue="false"
-        android:title=" Chinese Yuan Renminbi (CNY)"
+        android:title="Chinese Y Renminbi (CNY)"
         android:key="CNY"
         android:summaryOn="Shown"
         android:summaryOff="Not Shown"
-
-
         />
 
     <CheckBoxPreference
         android:enabled="true"
         android:defaultValue="false"
-        android:title=" Israeli New Shekel (ILS)"
+        android:title="Israeli New Shekel (ILS)"
         android:key="ILS"
         android:summaryOn="Shown"
         android:summaryOff="Not Shown"

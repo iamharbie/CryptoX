@@ -290,7 +290,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     @Override
     public void onCurrencyCardClick(int clickedCardPosition) {
 
-        // TODO: this get is curerently returning -1
+        // TODO: this get is currently returning -1 //DONE
         Currency currency = currenciesList.get(clickedCardPosition);
         Intent intent = new Intent(this,Converter.class);
         intent.putExtra(Converter.CURRENCY,currency);

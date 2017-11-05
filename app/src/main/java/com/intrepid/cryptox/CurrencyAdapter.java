@@ -21,7 +21,7 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.ViewHo
     private List<Currency> currenciesList;
     private currencyCardClickListener currencyCardClickListener;
 
-    public CurrencyAdapter(currencyCardClickListener currencyCardClickListener) {
+    CurrencyAdapter(currencyCardClickListener currencyCardClickListener) {
         this.currencyCardClickListener = currencyCardClickListener;
 
     }
@@ -43,11 +43,11 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.ViewHo
 
         Currency currency = currenciesList.get(position);
 
-        String currencyName = currency.getName();
-        String sBitcoinValue = String.valueOf(currency.getBitcoinValue()) + " ";
-        String sEthereumValue = String.valueOf(currency.getEthereumValue()) + " ";
+        String sCurrencyName = currency.getName() + "  ";
+        String sBitcoinValue = String.valueOf(currency.getBitcoinValue()) + "  ";
+        String sEthereumValue = String.valueOf(currency.getEthereumValue()) + "  ";
 
-        holder.textViewCurrencyName.setText(currencyName);
+        holder.textViewCurrencyName.setText(sCurrencyName);
         holder.textViewBitcoinValue.setText(sBitcoinValue);
         holder.textViewBitcoinValue.setSelected(true);
         holder.textViewEthereumValue.setText(sEthereumValue);
@@ -66,11 +66,11 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private TextView textViewCurrencyName, textViewBitcoinValue, textViewEthereumValue;
-        public RelativeLayout viewBackGround;
+        RelativeLayout viewBackGround;
         public CardView viewForeGround;
 
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             textViewCurrencyName = (TextView) itemView.findViewById(R.id.crypto_cardView_currency);
             textViewBitcoinValue = (TextView) itemView.findViewById(R.id.crypto_card_bitcoin);
@@ -95,23 +95,23 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.ViewHo
     }
 
 
-    public void removeItem(int position){
+    void removeItem(int position){
         currenciesList.remove(position);
         notifyItemRemoved(position);
     }
 
-    public void restoreItem(Currency currency, int position){
+    void restoreItem(Currency currency, int position){
         currenciesList.add(position,currency);
         notifyItemInserted(position);
     }
 
     /**
      *Method to set currenciesLIst.
-     * Not using a constructor to set it cos we may need to change it wiothout creating a new
-     * GitHubUserAdapter
+     * Not using a constructor to set it cos we may need to change it without creating a new
+     * CurrencyAdapter
      *
      */
-    public void setCurrenciesList(List<Currency> currenciesList){
+    void setCurrenciesList(List<Currency> currenciesList){
         this.currenciesList = currenciesList;
         notifyDataSetChanged();
     }
