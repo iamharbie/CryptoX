@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/result"
 
-        android:textColor="@color/activity_converter_text"
+        android:textColor="@color/activity_converter_title"
         android:textColorHint="@color/activity_converter_text"
         android:id="@+id/activity_converter_textview_value"
         android:textSize="40sp"
@@ -90,7 +90,7 @@
         />
 
     <EditText
-        android:layout_width="250dp"
+        android:layout_width="150dp"
         android:layout_height="50dp"
         android:textColor="#BDBDBD"
         android:textColorHint="#BDBDBD"
